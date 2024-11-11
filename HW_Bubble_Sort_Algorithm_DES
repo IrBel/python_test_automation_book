@@ -1,0 +1,13 @@
+# Bubble Sort Algorithm DES
+def bubble(array):
+    iterations = len(array) - 1
+    for i in range(iterations):
+        for j in range(iterations-i):
+            if array[j] < array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+
+
+a = [5, 10, 99, 85, 12, 1, 78, 66, 4, 8]
+print(a)
+bubble(a)
+print(a)
