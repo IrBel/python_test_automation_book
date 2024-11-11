@@ -1,4 +1,4 @@
-#In ascending order
+# Bubble Sort Algorithm in ascending order
 N = 3
 a = ["test", "My", "words"]
 print(a)
