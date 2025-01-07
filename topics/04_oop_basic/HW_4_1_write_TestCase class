@@ -1,0 +1,27 @@
+class TestCase:
+
+    def setup(self):
+        print("Setting up environment for the test")
+		
+	def run(self):
+	    print("Running the test")
+        
+    def teardown(self):
+        print("Cleaning up after the test")
+
+
+test_case_1 = TestCase()
+test_case_2 = TestCase()
+test_case_3 = TestCase()
+
+test_case_1.setup
+test_case_1.run
+test_case_1.teardown
+
+test_case_2.setup
+test_case_2.run
+test_case_2.teardown
+
+test_case_3.setup
+test_case_3.run
+test_case_3.teardown
