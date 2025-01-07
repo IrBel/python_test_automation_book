@@ -1,0 +1,35 @@
+class BaseTest:
+
+    def setup(self):
+        print("Base setting up")
+
+    def run(self):
+        print("Base test running")
+
+    def teardown(self):
+        print("Base cleaning up after the test")
+
+
+class NewTest(BaseTest):
+    def setup(self):
+        print("New setting up")
+
+    def run(self):
+        print("New test running")
+
+    def teardown(self):
+        print("New cleaning up after the test")
+
+
+def execute_test(test_case):
+    test_case.setup()
+    test_case.run()
+    test_case.teardown()
+
+
+base_case = BaseTest()
+new_case = NewTest()
+
+execute_test(base_case)
+print(" with new set")
+execute_test(new_case)
