@@ -1,12 +1,15 @@
 class TestCase:
 
-    def setup(self):
+    @staticmethod
+    def setup():
         print("Setting up environment for the test")
-		
-    def run(self):
+
+    @staticmethod
+    def run():
 	    print("Running the test")
-        
-    def teardown(self):
+
+    @staticmethod     
+    def teardown():
         print("Cleaning up after the test")
 
 
