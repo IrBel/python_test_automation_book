@@ -1,23 +1,30 @@
 class BaseTest:
-
-    def setup(self):
+    
+    @staticmethod
+    def setup():
         print("Base setting up")
 
-    def run(self):
+    @staticmethod
+    def run():
         print("Base test running")
 
-    def teardown(self):
+    @staticmethod
+    def teardown():
         print("Base cleaning up after the test")
 
 
 class NewTest(BaseTest):
-    def setup(self):
+    
+    @staticmethod
+    def setup():
         print("New setting up")
 
-    def run(self):
+    @staticmethod
+    def run():
         print("New test running")
 
-    def teardown(self):
+    @staticmethod
+    def teardown():
         print("New cleaning up after the test")
 
 
