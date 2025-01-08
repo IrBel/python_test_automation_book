@@ -1,0 +1,32 @@
+class BaseTest:
+
+    def setup(self):
+        print("Base setting up")
+
+    def run(self):
+        print("Base test running")
+
+    def teardown(self):
+        print("Base cleaning up after the test")
+
+class CustomMixinTest:
+
+    def log(self):
+        print("Logging of CustomMixinTest")
+
+class MixedTest(BaseTest,CustomMixinTest):
+
+    def setup(self):
+        print("Mixed Test setting up")
+		
+def execute_test(test):
+    test.setup()
+    test.run()
+    test.log()
+    test.teardown()
+
+    print("Resolution Order for MixedTest: ")
+    print(MixedTest.mro())
+
+test_case_1 = MixedTest()
+execute_test(test_case_1)
